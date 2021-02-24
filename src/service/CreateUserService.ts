@@ -1,6 +1,6 @@
-import { getRepository } from "typeorm";
+import { getCustomRepository } from "typeorm";
 import AppError from "../errors/AppError";
-import User from "../models/User";
+import UsersRepository from "../repositories/UsersRepository";
 
 interface Request {
   name: string;
@@ -17,7 +17,7 @@ interface Response {
 
 export default class CreateUserService {
   public async execute({ name, email }: Request): Promise<Response> {
-    const usersRespository = getRepository(User);
+    const usersRespository = getCustomRepository(UsersRepository);
 
     const isExistUser = await usersRespository.findOne({ where: { email } });
 
