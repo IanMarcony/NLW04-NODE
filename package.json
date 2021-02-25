@@ -8,7 +8,10 @@
     "start": "ts-node src/server.ts",
     "dev:server": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/server.ts",
     "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js",
-    "test": "NODE_ENV=test jest"
+    "test:windows": "set NODE_ENV=test&&jest",
+    "test:linux": "NODE_ENV=test jest",
+    "posttest:windows":"rm ./src/database/database.test.sqlite",
+    "posttest:linux":"rm ./src/database/database.test.sqlite"
   },
   "dependencies": {
     "express": "^4.17.1",
