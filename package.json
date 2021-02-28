@@ -8,10 +8,8 @@
     "start": "ts-node src/server.ts",
     "dev:server": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/server.ts",
     "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js",
-    "test:windows": "set NODE_ENV=test&&jest",
-    "test:linux": "NODE_ENV=test jest",
-    "posttest:windows": "rm ./src/database/database.test.sqlite",
-    "posttest:linux": "rm ./src/database/database.test.sqlite"
+    "test:windows": "set NODE_ENV=test&&jest -i",
+    "test:linux": "NODE_ENV=test jest -i"
   },
   "dependencies": {
     "express": "^4.17.1",
@@ -21,7 +19,8 @@
     "reflect-metadata": "^0.1.13",
     "sqlite3": "^5.0.2",
     "typeorm": "^0.2.31",
-    "uuid": "^8.3.2"
+    "uuid": "^8.3.2",
+    "yup": "^0.32.9"
   },
   "devDependencies": {
     "@types/express": "^4.17.11",
