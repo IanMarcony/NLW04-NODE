@@ -1,6 +1,6 @@
 # :rocket: NLW04-NODE
 
-This application was developed in Next Level Week event of Rockeseat. It's a Node application in backend to calculate a NPS in surveys
+This application was developed in Next Level Week event of [Rocketseat](https://rocketseat.com.br/). It's a Node application in backend to calculate a NPS in surveys
 
 ## :computer: 1. Technologies
 
